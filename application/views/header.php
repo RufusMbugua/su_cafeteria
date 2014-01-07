@@ -14,7 +14,7 @@
 				<a class="myLink" href="<?php echo base_url();?>items">Stock</a>
 			</li>
 			<li class="myLi" >
-				<a class="myLink" href="<?php echo base_url();?>sale">Sale</a>
+				<a class="myLink" href="<?php echo base_url();?>sales">Sales</a>
 			</li>
 			
 		</ul>
