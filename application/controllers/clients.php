@@ -50,5 +50,8 @@ class Clients extends MY_Controller {
 	public function edit() {
 
 	}
+	public function statistical_summary(){
+		$this->load->view('charts/chart_test');
+	}
 
 }

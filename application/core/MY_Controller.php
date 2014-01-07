@@ -37,4 +37,40 @@ class MY_Controller extends CI_Controller {
 		return $this -> item_list;
 	}
 
+	public function loadGraph($seriesData, $columns, $series, $columns, $chatyType) {
+		$finalData[] = $seriesData;
+		$finalData = json_encode($finalData);
+		$resultArraySize = 10;
+		$data['chartID'] = rand(1, 10000);
+		$data['resultArraySize'] = $resultArraySize;
+		$data['container'] = 'chart_expiry';
+		$data['chartType'] = 'chart_v';
+		$data['title'] = 'UPID Dashboard';
+		$data['chartTitle'] = "Crime Trends";
+		$data['categories'] = json_encode($columns);
+		$data['yAxis'] = 'Total';
+		$data['dataSource'] = $finalData;
+		$data['chartType'] = $chatyType;
+		$data['series'] = json_encode($series);
+		$this -> load -> view('charts/chart_normal_v', $data);
+	}
+
+	public function loadPie($seriesData, $columns, $series, $columns, $chatyType) {
+		$finalData[] = $seriesData;
+		$finalData = json_encode($finalData);
+		$resultArraySize = 10;
+		$data['chartID'] = rand(1, 10000);
+		$data['resultArraySize'] = $resultArraySize;
+		$data['container'] = 'chart_expiry';
+		$data['chartType'] = 'chart_v';
+		$data['title'] = 'UPID Dashboard';
+		$data['chartTitle'] = "Crime Trends";
+		$data['categories'] = json_encode($columns);
+		$data['yAxis'] = 'Total';
+		$data['dataSource'] = $finalData;
+		$data['chartType'] = $chatyType;
+		$data['series'] = json_encode($series);
+		$this -> load -> view('charts/chart_pie_v', $data);
+	}
+
 }

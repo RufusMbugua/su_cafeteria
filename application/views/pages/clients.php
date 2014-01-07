@@ -7,18 +7,9 @@
 	</div>
 	<div class="col-md-4">
 		<div class="inner">
-			<h3>Current Order<i class="fa fa-info-circle pull-right"></i></h3>
+			<h3>Statistical Summary<i class="fa fa-info-circle pull-right"></i></h3>
 
-			<table table border="0" cellpadding="4" cellspacing="0" class="table-bordered table-striped table-hover" id="current_order">
-				<thead>
-					<th>Item Name</th><th>Item Quantity</th><th>Cost</th>
-				</thead><tbody></tbody>
-				<tfoot>
-					<tr>
-						<th colspan="2">Total</th><td id="cost_total">0</td>
-					</tr>
-				</tfoot>
-			</table>
+			<div class="graph" id="statistical_summary"></div>
 
 		</div>
 	</div>
@@ -26,9 +17,7 @@
 <div class="row">
 	<div class="col-md-4">
 		<div class="inner">
-			<h4>Add to Order<i class="fa fa-info-circle pull-right"></i></h4>
-			<?php $this->load->view('forms/add_order')
-			?>
+
 		</div>
 	</div>
 	<div class="col-md-4">

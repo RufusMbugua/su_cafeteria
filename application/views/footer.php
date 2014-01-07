@@ -2,6 +2,7 @@
 <script src='<?php echo base_url(); ?>assets/scripts/bootstrap/bootstrap.min.js' type="text/javascript"></script>
 <script src='<?php echo base_url(); ?>assets/datatables/scripts/jquery.dataTables.min.js'></script>
 <script src='<?php echo base_url(); ?>assets/scripts/modernizr.js'></script>
+<script src='<?php echo base_url(); ?>assets/scripts/globalize.min.js'></script>
 
 <!--script src='assets/scripts/jquery.onepage-scroll.js'></script-->
 <script>
@@ -78,5 +79,8 @@ function reduce_total(removedCost){
 	cost = currentCost-removedCost;
 	$("#cost_total").text(cost);
 }
+
+//Load Graphs
+$("#statistical_summary").load("<?php echo base_url();?>clients/statistical_summary");
 	}); 
 </script>
