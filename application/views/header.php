@@ -23,6 +23,9 @@
 					
 				</ul>
 			</li>
+			<li class="myLi" >
+				<a class="myLink" href="<?php echo base_url(); ?>clients">Clients</a>
+			</li>
 			
 
 		</ul>
