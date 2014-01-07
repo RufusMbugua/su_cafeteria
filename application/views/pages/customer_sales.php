@@ -1,14 +1,14 @@
 <div class="row">
 	<div class="col-md-4">
 		<div class="inner">
-			<h3>Add Item to Menu <i class="fa fa-info-circle pull-right"></i></h3>
+			<h3>Add to Order<i class="fa fa-info-circle pull-right"></i></h3>
 
 			
 		</div>
 	</div>
 	<div class="col-md-8">
 		<div class="inner">
-			<h3>Current Menu<i class="fa fa-info-circle pull-right"></i></h3>
+			<h3>Current Order<i class="fa fa-info-circle pull-right"></i></h3>
 			<form>
 			
 			</form>

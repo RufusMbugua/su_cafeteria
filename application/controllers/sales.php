@@ -11,9 +11,18 @@ class Sales extends MY_Controller {
 		$this -> load -> view('template_v', $data);
 	}
 
+	public function customer_sales() {
+		$data['contentView'] = 'pages/customer_sales';
+		$this -> load -> view('template_v', $data);
+	}
+
+	public function client_sales() {
+		$data['contentView'] = 'pages/client_sales';
+		$this -> load -> view('template_v', $data);
+	}
+
 	public function add() {
-		
-		
+
 	}
 
 	public function suspend() {
@@ -23,15 +32,5 @@ class Sales extends MY_Controller {
 	public function edit() {
 
 	}
-
-	public function stock_in() {
-		
-	}
-
-	public function stock_out() {
-
-	}
-
-
 
 }

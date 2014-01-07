@@ -1,5 +1,3 @@
-
-
 <nav class="navbar navbar-default" role="navigation">
 	<a id="setCollapse"href="javascript:;" class="navbar-toggle collapsed"><i class="fa fa-list-ul"></i> </a>
 	<!-- Brand and toggle get grouped for better mobile display -->
@@ -8,29 +6,39 @@
 	<div class="navbar-collapse collapse myNav" id="myCollapse">
 		<ul class="nav navbar-nav">
 			<li class="myLi" >
-				<a class="myLink" href="<?php echo base_url();?>">Home</a>
+				<a class="myLink" href="<?php echo base_url(); ?>">Home</a>
 			</li>
 			<li class="myLi" >
-				<a class="myLink" href="<?php echo base_url();?>items">Stock</a>
+				<a class="myLink" href="<?php echo base_url(); ?>items">Stock</a>
 			</li>
-			<li class="myLi" >
-				<a class="myLink" href="<?php echo base_url();?>sales">Sales</a>
+			<li class="myLi dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Sales <b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li>
+						<a class="myLink" href="<?php echo base_url(); ?>sales/client_sales">Client</a>
+					</li>
+					<li>
+						<a class="myLink" href="<?php echo base_url(); ?>sales/customer_sales">Customer</a>
+					</li>
+					
+				</ul>
 			</li>
 			
+
 		</ul>
 
 		<div class="date nav navbar-nav navbar-right">
 			Welcome, User</br>
-			<?php echo date('l, d M Y ');?>
+			<?php echo date('l, d M Y '); ?>
 			<!--form class="navbar-form navbar-left" role="search">
-				<div class="form-group">
-					<input type="text" class="form-control" placeholder="Search">
-				</div>
-				<button type="submit" class="btn btn-primary">
-					<i class="fa fa-search"></i>Search
-				</button>
+			<div class="form-group">
+			<input type="text" class="form-control" placeholder="Search">
+			</div>
+			<button type="submit" class="btn btn-primary">
+			<i class="fa fa-search"></i>Search
+			</button>
 			</form-->
 		</div>
 	</div>
-	
+
 </nav>
