@@ -1,7 +1,7 @@
 <?php
 
 class Items extends MY_Controller {
-function __construct() {
+	function __construct() {
 		parent::__construct();
 	}
 
@@ -56,7 +56,7 @@ function __construct() {
 
 				$this -> db -> where('item_name', $item -> item_name);
 				$this -> db -> update('items', $data);
-					redirect('items');
+				redirect('items');
 			}
 		}
 	}
@@ -64,8 +64,6 @@ function __construct() {
 	public function stock_out() {
 
 	}
-
-	
 
 	public function stock_table() {
 		//Table Template
@@ -86,6 +84,18 @@ function __construct() {
 
 	public function popular() {
 		$this -> load -> view('charts/chart_v');
+	}
+
+	public function get_cost($item_name, $item_quantity) {
+		$item_name=urldecode($item_name);
+		$this -> db -> where('item_name', $item_name);
+		$items = $this -> db -> get('items');
+
+		foreach ($items->result() as $item) {
+			$cost = $item -> item_unit_cost;
+		}
+		$cost = $cost * $item_quantity;
+		echo $cost;
 	}
 
 }

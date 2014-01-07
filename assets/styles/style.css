@@ -51,7 +51,7 @@ body {
 	height: 40%;
 	margin-bottom: 2%;
 	font-size: 0.8em !important;
-	overflow:hidden;
+	overflow: hidden;
 }
 .inner h3, .inner h4 {
 	width: 100%;
@@ -66,28 +66,27 @@ body {
  *
  */
 .inner form, .inner ul, .inner table {
-	height:90%;
+	width: 100%;
+	height: 90%;
 	padding: 2%;
-	overflow-y:auto;
+	overflow-y: auto;
 }
-.inner form button {
+.inner > form > button,.inner > form > a {
 	margin-top: 10px;
 }
 .date {
 	padding-right: 2%;
 	font-size: 0.8em;
 }
-.error{
-	color:red;
+.error {
+	color: red;
 }
-.error i{
-	padding-right:10px;
+.error i {
+	padding-right: 10px;
 }
-td a{
-	margin-right:10px;
-	
+td a {
+	margin-right: 10px;
 }
-td a:hover{
-	text-decoration:none;
-	
+td a:hover {
+	text-decoration: none;
 }
