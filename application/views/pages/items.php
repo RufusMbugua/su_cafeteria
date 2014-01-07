@@ -54,7 +54,7 @@
 			<div class="input-group">
 				<span class="input-group-addon"></span>
 				<select name="item_sname" type="text" class="form-control" placeholder="Item Name">
-					<?php echo $item_list; ?>
+					<?php echo $this -> item_list; ?>
 				</select>
 			</div>
 			<label name="ItemSQuantity">Item Quantity</label>

@@ -65,16 +65,7 @@ function __construct() {
 
 	}
 
-	public function item_list() {
-		//initialize
-		$options = "<option>Please Choose Item</option>";
-		$this -> db -> select('item_name');
-		$items = $this -> db -> get('items');
-		foreach ($items->result() as $item) {
-			$options .= "<option>" . $item -> item_name . "</option>";
-		}
-		return $options;
-	}
+	
 
 	public function stock_table() {
 		//Table Template

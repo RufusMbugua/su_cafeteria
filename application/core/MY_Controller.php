@@ -1,10 +1,11 @@
 <?php
 
 class MY_Controller extends CI_Controller {
-	var $menu_list;
+	var $menu_list, $item_list;
 	function __construct() {
 		parent::__construct();
 		$this -> menu_list();
+		$this -> item_list();
 	}
 
 	public function menu_list() {
@@ -20,8 +21,20 @@ class MY_Controller extends CI_Controller {
 			$item_action = "<a class='btn-xs btn-primary edit' href='" . base_url() . "menu/edit/" . $item -> item_code . "'>Edit</a><a class='btn-xs btn-danger suspend' href='" . base_url() . "menu/remove/" . $item -> item_code . "'>Suspend</a>";
 			$this -> table -> add_row($item -> item_name, $item -> item_qty_in_stock, $item_action);
 		}
-		$this->menu_list = $this -> table -> generate();
+		$this -> menu_list = $this -> table -> generate();
 		return $this -> menu_list;
+	}
+
+	public function item_list() {
+		//initialize
+		$options = "<option>Please Choose Item</option>";
+		$this -> db -> select('item_name');
+		$items = $this -> db -> get('items');
+		foreach ($items->result() as $item) {
+			$options .= "<option>" . $item -> item_name . "</option>";
+		}
+		$this -> item_list = $options;
+		return $this -> item_list;
 	}
 
 }
