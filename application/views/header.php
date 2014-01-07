@@ -8,13 +8,13 @@
 	<div class="navbar-collapse collapse myNav" id="myCollapse">
 		<ul class="nav navbar-nav">
 			<li class="myLi" >
-				<a class="myLink" href="#">Home</a>
+				<a class="myLink" href="<?php echo base_url();?>">Home</a>
 			</li>
 			<li class="myLi" >
-				<a class="myLink" href="#">Stock</a>
+				<a class="myLink" href="<?php echo base_url();?>items">Stock</a>
 			</li>
 			<li class="myLi" >
-				<a class="myLink" href="#">Menu</a>
+				<a class="myLink" href="<?php echo base_url();?>sale">Sale</a>
 			</li>
 			
 		</ul>
