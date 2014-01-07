@@ -19,6 +19,7 @@
 	<div class="col-md-4">
 		<div class="inner">
 			<h4>Add to Order<i class="fa fa-info-circle pull-right"></i></h4>
+			<?php $this->load->view('forms/add_order') ?>
 		</div>
 	</div>
 	<div class="col-md-4">
