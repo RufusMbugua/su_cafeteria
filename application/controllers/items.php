@@ -47,8 +47,13 @@ class Items extends CI_Controller {
 		if ($_POST) {
 			$this -> db -> where('item_name', $this -> input -> post('item_sname'));
 			$items = $this -> db -> get('items');
+
 			foreach ($items->result() as $item) {
-				//$this->db->update('items',);
+				$data['item_qty_in_stock'] = $this -> input -> post('item_squantity') + $item -> item_qty_in_stock;
+
+				$this -> db -> where('item_name', $item -> item_name);
+				$this -> db -> update('items', $data);
+					redirect('items');
 			}
 		}
 	}
